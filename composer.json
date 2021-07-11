@@ -1,0 +1,23 @@
+{
+    "name": "kennynguyeenx/ports-adapters-architecture-in-php",
+    "type": "project",
+    "version": "1.0",
+    "description": "Implementation ports & adapters architecture in PHP.",
+    "keywords": ["php", "ports", "adapters", "architecture"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kenny Nguyen",
+            "email": "kennynguyeenx@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {"Kennynguyeenx\\PortsAndAdapters\\": "src"}
+    }
+}
