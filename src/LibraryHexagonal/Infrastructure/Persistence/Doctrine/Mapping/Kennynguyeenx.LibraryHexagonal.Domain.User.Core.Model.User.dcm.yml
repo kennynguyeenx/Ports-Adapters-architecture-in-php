@@ -1,0 +1,31 @@
+Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\User:
+  type: entity
+  repositoryClass: Coccoc\GameApi\Infrastructure\Domain\Model\Config\DoctrineConfigRepository
+  table: configs
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+      length: 45
+    value:
+      type: string
+      length: 100
+    status:
+      type: integer
+      default: 1
+    description:
+      type: text
+      nullable: true
+    createTime:
+      type: datetime
+      column: create_time
+    updateTime:
+      type: datetime
+      column: update_time
+  uniqueConstraints:
+    unq_name:
+      columns: name

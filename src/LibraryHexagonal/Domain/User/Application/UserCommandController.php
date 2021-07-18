@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Kennynguyeenx\LibraryHexagonal\Domain\User\Application;
 
 use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\AddUserCommand;
-use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Ports\AddNewUser;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Ports\Incoming\AddNewUser;
 
 /**
  * Class UserCommandController
@@ -29,11 +29,10 @@ class UserCommandController
 
     /**
      * @param AddUserCommand $addUserCommand
-     * @return mixed
+     * @return void
      */
-    public function addNewUser(AddUserCommand $addUserCommand)
+    public function addNewUser(AddUserCommand $addUserCommand): void
     {
         $this->addNewUser->handle($addUserCommand);
-        return new \HttpResponse("New user was added to library", HttpStatus.CREATED);
     }
 }

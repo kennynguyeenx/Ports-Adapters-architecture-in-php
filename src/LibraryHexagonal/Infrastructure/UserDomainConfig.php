@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace Kennynguyeenx\LibraryHexagonal\Infrastructure;
 
-use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Ports\UserDatabase;
+use DI\Container;
+use Doctrine\ORM\EntityManager;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\User;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Ports\Outgoing\UserDatabase;
 use Kennynguyeenx\LibraryHexagonal\Domain\User\Infrastructure\UserDatabaseAdapter;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Infrastructure\UserRepository;
+use function DI\factory;
 
 /**
  * Class UserDomainConfig
@@ -19,9 +24,14 @@ class UserDomainConfig
     public static function getConfig(): array
     {
         return [
-            UserDatabase::class => function(Application $application) {
-                return $application->make(UserDatabaseAdapter::class);
-            }
+            UserRepository::class => factory(function (Container $c) {
+                /** @var EntityManager $em */
+                $em = $c->get('em');
+                return $em->getRepository(User::class);
+            }),
+            UserDatabase::class => factory(function(Container $container) {
+                return $container->make(UserDatabaseAdapter::class);
+            })
         ];
     }
 }

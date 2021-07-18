@@ -17,11 +17,11 @@ class AddUserCommand
     /**
      * @var string
      */
-    private $email;
+    private $lastName;
     /**
      * @var string
      */
-    private $lastName;
+    private $email;
 
     /**
      * @return string
@@ -44,24 +44,6 @@ class AddUserCommand
     /**
      * @return string
      */
-    public function getEmail(): string
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param string $email
-     * @return AddUserCommand
-     */
-    public function setEmail(string $email): AddUserCommand
-    {
-        $this->email = $email;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
     public function getLastName(): string
     {
         return $this->lastName;
@@ -74,6 +56,24 @@ class AddUserCommand
     public function setLastName(string $lastName): AddUserCommand
     {
         $this->lastName = $lastName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     * @return AddUserCommand
+     */
+    public function setEmail(string $email): AddUserCommand
+    {
+        $this->email = $email;
         return $this;
     }
 }

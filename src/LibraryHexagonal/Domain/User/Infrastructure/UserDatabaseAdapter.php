@@ -6,7 +6,7 @@ namespace Kennynguyeenx\LibraryHexagonal\Domain\User\Infrastructure;
 
 use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\User;
 use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\UserIdentifier;
-use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Ports\UserDatabase;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Ports\Outgoing\UserDatabase;
 
 /**
  * Class UserDatabaseAdapter
