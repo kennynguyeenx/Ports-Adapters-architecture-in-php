@@ -7,11 +7,11 @@ use Slim\App;
 
 /** @var App $app */
 try {
-    $application = LibraryHexagonalApplication::createApp();
+    $app = LibraryHexagonalApplication::createApp();
 } catch (Exception $e) {
     die($e->getMessage());
 }
 
 require ROOT_FOLDER . '/configs/http-routes.php';
 
-return $application;
+return $app;

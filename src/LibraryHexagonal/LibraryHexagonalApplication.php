@@ -7,16 +7,23 @@ namespace Kennynguyeenx\LibraryHexagonal;
 use DI\Bridge\Slim\Bridge;
 use DI\Container;
 use DI\ContainerBuilder;
-use Doctrine\DBAL\Driver\Mysqli\Driver;
+use Doctrine\Common\Cache\Cache;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\ORMException;
 use Doctrine\ORM\Tools\Setup;
 use Exception;
 use Kennynguyeenx\LibraryHexagonal\Infrastructure\BorrowingDomainConfig;
+use Kennynguyeenx\LibraryHexagonal\Infrastructure\Doctrine\Cache\RedisClusterCache;
+use Kennynguyeenx\LibraryHexagonal\Infrastructure\Doctrine\DBAL\Driver\Mysqli\Driver;
 use Kennynguyeenx\LibraryHexagonal\Infrastructure\EmailDomainConfig;
 use Kennynguyeenx\LibraryHexagonal\Infrastructure\InventoryDomainConfig;
 use Kennynguyeenx\LibraryHexagonal\Infrastructure\LibraryHexagonalConfig;
 use Kennynguyeenx\LibraryHexagonal\Infrastructure\UserDomainConfig;
+use Monolog\Handler\StreamHandler;
+use Monolog\Logger;
+use Monolog\Processor\UidProcessor;
+use Psr\Log\LoggerInterface;
+use RedisCluster;
 use Slim\App;
 
 /**
@@ -83,7 +90,45 @@ class LibraryHexagonalApplication
         ];
 
         $proxiesDir = $config['doctrine']['proxy']['path'];
-        $config = Setup::createYAMLMetadataConfiguration($paths, false, $proxiesDir);
+        $cache = self::getCache($setting);
+        $config = Setup::createYAMLMetadataConfiguration($paths, false, $proxiesDir, $cache);
         return EntityManager::create($dbParams, $config);
+    }
+
+    /**
+     * @param array $setting
+     * @return Cache
+     */
+    protected static function getCache(array $setting): Cache
+    {
+        $config = $setting['config'];
+        $redisCluster = $config['redis_cluster'];
+        $nameSpace = (string) $redisCluster['name_space'] . ':doctrine';
+        try {
+            $client = new RedisCluster(
+                null,
+                $redisCluster['host_array'],
+                1.5,
+                1.5,
+                true,
+                $redisCluster['password']
+            );
+
+            return new RedisClusterCache($client, $nameSpace, self::getLogger($setting));
+        } catch (\Exception $exception) {
+            die($exception->getMessage());
+        }
+    }
+
+    /**
+     * @return LoggerInterface
+     */
+    private static function getLogger(): LoggerInterface
+    {
+        $settings = self::initSetting()['custom_settings']['logger'];
+        $logger = new Logger($settings['name'] . '.PHP');
+        $logger->pushProcessor(new UidProcessor());
+        $logger->pushHandler(new StreamHandler($settings['path'], $settings['level']));
+        return $logger;
     }
 }

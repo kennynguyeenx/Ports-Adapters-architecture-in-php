@@ -5,9 +5,11 @@ declare(strict_types=1);
 namespace Kennynguyeenx\LibraryHexagonal\Infrastructure;
 
 use DI\Container;
+use Kennynguyeenx\LibraryHexagonal\Application\Http\Controller\Api\V1\UserController;
 use Kennynguyeenx\LibraryHexagonal\Application\Http\Response\ResponseHelper;
 use Kennynguyeenx\LibraryHexagonal\Domain\User\Application\UserCommandController;
-use Kennynguyeenx\LibraryHexagonal\Domain\User\Application\UserController;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Ports\Incoming\AddNewUser;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\UserFacade;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Monolog\Processor\UidProcessor;

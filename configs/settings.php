@@ -26,7 +26,12 @@ return [
                 'password' => getenv('DB_MYSQL_PASSWORD'),
                 'charset' => getenv('DB_MYSQL_CHARSET')
             ]
-        ]
+        ],
+        'redis_cluster' => [
+            'host_array' => explode(',', getenv('REDIS_HOST_ARRAY')),
+            'password' => getenv('REDIS_PASSWORD'),
+            'name_space' => getenv('REDIS_NAME_SPACE')
+        ],
     ],
     'custom_settings' => [
         // Monolog settings

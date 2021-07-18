@@ -16,7 +16,7 @@ RUN apt-get update -y \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install addition php ext
-RUN docker-php-ext-install opcache mysql \
+RUN docker-php-ext-install opcache mysqli \
     && pecl install apcu \
     && docker-php-ext-enable apcu \
     && pecl install redis \

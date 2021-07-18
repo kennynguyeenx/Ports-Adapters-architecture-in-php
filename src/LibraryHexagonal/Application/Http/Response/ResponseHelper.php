@@ -74,12 +74,11 @@ class ResponseHelper
 
     /**
      * @param Response $response
-     * @param array|null $data
      * @return Response
      */
-    public function responseCreated(Response $response, array $data = null): Response
+    public function responseCreated(Response $response): Response
     {
-        return $this->responseSuccess($response, $data, 201);
+        return $response->withStatus(201);
     }
 
     /**

@@ -1,31 +1,24 @@
 Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\User:
   type: entity
-  repositoryClass: Coccoc\GameApi\Infrastructure\Domain\Model\Config\DoctrineConfigRepository
-  table: configs
+  repositoryClass: Kennynguyeenx\LibraryHexagonal\Infrastructure\Domain\User\Core\Model\User\DoctrineUserRepository
+  table: user
   id:
     id:
       type: integer
       generator:
         strategy: AUTO
   fields:
-    name:
+    firstName:
+      type: string
+      length: 255
+      column: first_name
+    lastName:
+      type: string
+      length: 255
+      column: last_name
+    email:
       type: string
       length: 45
-    value:
-      type: string
-      length: 100
-    status:
-      type: integer
-      default: 1
-    description:
-      type: text
-      nullable: true
-    createTime:
-      type: datetime
-      column: create_time
-    updateTime:
-      type: datetime
-      column: update_time
   uniqueConstraints:
-    unq_name:
-      columns: name
+    email_UNIQUE:
+      columns: email

@@ -37,4 +37,12 @@ class EmailAddress
     {
         return $this->email;
     }
+
+    /**
+     * @return string
+     */
+    public function __toString(): string
+    {
+        return $this->email;
+    }
 }

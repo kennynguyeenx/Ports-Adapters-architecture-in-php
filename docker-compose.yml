@@ -1,9 +1,5 @@
 version: '3.4'
 
-volumes:
-  mongodb:
-    driver: local
-
 services:
   redis-cluster:
     image: grokzen/redis-cluster:latest
@@ -13,16 +9,36 @@ services:
     networks:
       - default
 
+  mysql:
+    container_name: ${APP_NAME}--mysql
+    image: mysql:5.7.27
+    restart: always
+    volumes:
+      - "mysql:/var/lib/mysql"
+      - ./:/var/www
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_DATABASE: library
+      MYSQL_PASSWORD: 12345678
+      MYSQL_USER: library
+    networks:
+      - default
+    ports:
+      - ${MYSQL_PORT_EXPOSE}:3306
+
   php:
     container_name: ${APP_NAME}-php
     build:
       context: .
       dockerfile: ./docker/php/Dockerfile
       target: build
+      args:
+        - PHP_OPCACHE_VALIDATE_TIMESTAMPS=1
     volumes:
       - .:/app
     depends_on:
       - redis-cluster
+      - mysql
     env_file: .env
     networks:
       - default
@@ -45,3 +61,7 @@ networks:
   default:
     external:
       name: library_nw
+
+volumes:
+  mysql:
+    driver: local
