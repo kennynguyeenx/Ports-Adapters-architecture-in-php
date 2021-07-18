@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Outgoing;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Outgoing;
 
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\BookReservedEvent;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\BookReservedEvent;
 
 /**
  * Interface BorrowingEventPublisher
- * @package Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Outgoing
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Outgoing
  */
 interface BorrowingEventPublisher
 {

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Ports;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Ports;
 
-use Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Model\AddUserCommand;
-use Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Model\UserIdentifier;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\AddUserCommand;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\UserIdentifier;
 
 /**
  * Interface AddNewUser
- * @package Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Ports
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Ports
  */
 interface AddNewUser
 {

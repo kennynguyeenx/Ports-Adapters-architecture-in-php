@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\User\Infrastructure;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\User\Infrastructure;
 
-use Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Model\User;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\User;
 
 /**
  * Class UserRepository
- * @package Kennynguyeenx\PortsAndAdapters\Domain\User\Infrastructure
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\User\Infrastructure
  */
 class UserRepository
 {

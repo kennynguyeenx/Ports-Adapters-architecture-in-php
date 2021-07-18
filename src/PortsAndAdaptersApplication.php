@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters;
+namespace Kennynguyeenx\LibraryHexagonal;
 
 /**
- * Class PortsAndAdaptersApplication
- * @package Kennynguyeenx\PortsAndAdapters
+ * Class LibraryHexagonalApplication
+ * @package Kennynguyeenx\LibraryHexagonal
  */
-class PortsAndAdaptersApplication
+class LibraryHexagonalApplication
 {
+    // Load all configs
 }

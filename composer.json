@@ -1,9 +1,9 @@
 {
-    "name": "kennynguyeenx/ports-adapters-architecture-in-php",
+    "name": "kennynguyeenx/library-hexagonal-in-php",
     "type": "project",
     "version": "1.0",
     "description": "Implementation ports & adapters architecture in PHP.",
-    "keywords": ["php", "ports", "adapters", "architecture"],
+    "keywords": ["php", "ports", "adapters", "architecture", "library", "hexagonal"],
     "license": "MIT",
     "authors": [
         {
@@ -12,12 +12,13 @@
         }
     ],
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.1",
+        "sendgrid/sendgrid": "^7.9"
     },
     "require-dev": {
 
     },
     "autoload": {
-        "psr-4": {"Kennynguyeenx\\PortsAndAdapters\\": "src"}
+        "psr-4": {"Kennynguyeenx\\LibraryHexagonal\\": "src"}
     }
 }

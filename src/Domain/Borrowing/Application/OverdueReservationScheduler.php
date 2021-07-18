@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Application;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Application;
 
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Incoming\CancelOverdueReservations;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Incoming\CancelOverdueReservations;
 
 /**
  * Class OverdueReservationScheduler
- * @package Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Application
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Application
  */
 class OverdueReservationScheduler
 {

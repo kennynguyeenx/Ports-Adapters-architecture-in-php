@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model;
 
 use InvalidArgumentException;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\Exception\TooManyBooksAssignedToUserException;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\Exception\TooManyBooksAssignedToUserException;
 
 /**
  * Class ActiveUser
- * @package Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model
  */
 class ActiveUser
 {

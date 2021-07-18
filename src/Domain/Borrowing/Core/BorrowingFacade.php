@@ -2,29 +2,29 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core;
 
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\AvailableBook;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\BookReservationCommand;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\BookReservedEvent;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\BorrowBookCommand;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\Exception\ActiveUserNotFoundException;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\Exception\AvailableBookNotFoundException;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\Exception\BorrowedBookNotFoundException;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\Exception\ReservedBookNotFoundException;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\GiveBackBookCommand;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\MakeBookAvailableCommand;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Incoming\BorrowBook;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Incoming\CancelOverdueReservations;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Incoming\GiveBackBook;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Incoming\MakeBookAvailable;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Incoming\ReserveBook;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Outgoing\BorrowingDatabase;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Outgoing\BorrowingEventPublisher;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\AvailableBook;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\BookReservationCommand;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\BookReservedEvent;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\BorrowBookCommand;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\Exception\ActiveUserNotFoundException;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\Exception\AvailableBookNotFoundException;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\Exception\BorrowedBookNotFoundException;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\Exception\ReservedBookNotFoundException;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\GiveBackBookCommand;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\MakeBookAvailableCommand;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Incoming\BorrowBook;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Incoming\CancelOverdueReservations;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Incoming\GiveBackBook;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Incoming\MakeBookAvailable;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Incoming\ReserveBook;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Outgoing\BorrowingDatabase;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Outgoing\BorrowingEventPublisher;
 
 /**
  * Class BorrowingFacade
- * @package Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core
  */
 class BorrowingFacade implements BorrowBook, CancelOverdueReservations, MakeBookAvailable, ReserveBook, GiveBackBook
 {

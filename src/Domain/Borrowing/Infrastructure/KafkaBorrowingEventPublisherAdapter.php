@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Infrastructure;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Infrastructure;
 
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\BookReservedEvent;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Outgoing\BorrowingEventPublisher;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\BookReservedEvent;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Outgoing\BorrowingEventPublisher;
 
 /**
  * Class KafkaBorrowingEventPublisherAdapter
- * @package Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Infrastructure
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Infrastructure
  */
 class KafkaBorrowingEventPublisherAdapter implements BorrowingEventPublisher
 {

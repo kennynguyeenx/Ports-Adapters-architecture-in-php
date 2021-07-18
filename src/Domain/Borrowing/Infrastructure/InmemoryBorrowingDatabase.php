@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Infrastructure;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Infrastructure;
 
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Outgoing\BorrowingDatabase;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Outgoing\BorrowingDatabase;
 
 /**
  * Class InmemoryBorrowingDatabase
- * @package Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Infrastructure
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Infrastructure
  */
 abstract class InmemoryBorrowingDatabase implements BorrowingDatabase
 {

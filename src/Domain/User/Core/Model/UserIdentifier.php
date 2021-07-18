@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Model;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model;
 
 /**
  * Class UserIdentifier
- * @package Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Model
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model
  */
 class UserIdentifier
 {

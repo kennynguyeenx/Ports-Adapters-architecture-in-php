@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\User\Core;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\User\Core;
 
-use Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Model\AddUserCommand;
-use Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Model\User;
-use Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Model\UserIdentifier;
-use Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Ports\AddNewUser;
-use Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Ports\UserDatabase;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\AddUserCommand;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\User;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\UserIdentifier;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Ports\AddNewUser;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Ports\UserDatabase;
 
 /**
  * Class UserFacade
- * @package Kennynguyeenx\PortsAndAdapters\Domain\User\Core
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\User\Core
  */
 class UserFacade implements AddNewUser
 {

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\User\Application;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\User\Application;
 
-use Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Model\AddUserCommand;
-use Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Ports\AddNewUser;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\AddUserCommand;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Ports\AddNewUser;
 
 /**
  * Class UserCommandController
- * @package Kennynguyeenx\PortsAndAdapters\Domain\User\Application
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\User\Application
  */
 class UserCommandController
 {

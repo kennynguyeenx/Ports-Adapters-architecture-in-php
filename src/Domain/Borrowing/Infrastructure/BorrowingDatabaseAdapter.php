@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Infrastructure;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Infrastructure;
 
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\ActiveUser;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\AvailableBook;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\BorrowedBook;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\OverdueReservation;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\ReservationDetails;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\ReservationId;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\ReservedBook;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Outgoing\BorrowingDatabase;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\ActiveUser;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\AvailableBook;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\BorrowedBook;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\OverdueReservation;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\ReservationDetails;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\ReservationId;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\ReservedBook;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Outgoing\BorrowingDatabase;
 
 /**
  * Class UserDatabaseAdapter
- * @package Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Infrastructure
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Infrastructure
  */
 class BorrowingDatabaseAdapter implements BorrowingDatabase
 {

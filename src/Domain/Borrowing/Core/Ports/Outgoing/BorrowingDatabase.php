@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Outgoing;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Outgoing;
 
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\ActiveUser;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\AvailableBook;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\BorrowedBook;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\OverdueReservation;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\ReservationDetails;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\ReservedBook;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\ActiveUser;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\AvailableBook;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\BorrowedBook;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\OverdueReservation;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\ReservationDetails;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\ReservedBook;
 
 /**
  * Interface BorrowingDatabase
- * @package Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Outgoing
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Outgoing
  */
 interface BorrowingDatabase
 {

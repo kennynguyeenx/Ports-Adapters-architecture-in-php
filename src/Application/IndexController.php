@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Application;
+namespace Kennynguyeenx\LibraryHexagonal\Application;
 
 /**
  * Class IndexController
- * @package Kennynguyeenx\PortsAndAdapters\Application
+ * @package Kennynguyeenx\LibraryHexagonal\Application
  */
 class IndexController
 {

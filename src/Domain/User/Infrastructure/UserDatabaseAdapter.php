@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\User\Infrastructure;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\User\Infrastructure;
 
-use Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Model\User;
-use Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Model\UserIdentifier;
-use Kennynguyeenx\PortsAndAdapters\Domain\User\Core\Ports\UserDatabase;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\User;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Model\UserIdentifier;
+use Kennynguyeenx\LibraryHexagonal\Domain\User\Core\Ports\UserDatabase;
 
 /**
  * Class UserDatabaseAdapter
- * @package Kennynguyeenx\PortsAndAdapters\Domain\User\Infrastructure
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\User\Infrastructure
  */
 class UserDatabaseAdapter implements UserDatabase
 {

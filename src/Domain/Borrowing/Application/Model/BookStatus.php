@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Application\Model;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Application\Model;
 
 use InvalidArgumentException;
 
 /**
  * Class BookStatus
- * @package Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Application\Model
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Application\Model
  */
 class BookStatus
 {

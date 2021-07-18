@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model;
 
 /**
  * Class GiveBackBookCommand
- * @package Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model
  */
 class GiveBackBookCommand
 {

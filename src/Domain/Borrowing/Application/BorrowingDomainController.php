@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Application;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Application;
 
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Application\Model\BookStatus;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Application\Model\ChangeBookStatusRequest;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\BookReservationCommand;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\BorrowBookCommand;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\GiveBackBookCommand;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Incoming\BorrowBook;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Incoming\GiveBackBook;
-use Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Ports\Incoming\ReserveBook;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Application\Model\BookStatus;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Application\Model\ChangeBookStatusRequest;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\BookReservationCommand;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\BorrowBookCommand;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\GiveBackBookCommand;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Incoming\BorrowBook;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Incoming\GiveBackBook;
+use Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Ports\Incoming\ReserveBook;
 
 /**
  * Class BorrowingDomainController
- * @package Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Application
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Application
  */
 class BorrowingDomainController
 {

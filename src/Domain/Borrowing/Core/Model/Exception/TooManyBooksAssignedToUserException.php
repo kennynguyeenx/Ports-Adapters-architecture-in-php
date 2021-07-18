@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\Exception;
+namespace Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\Exception;
 
 use Exception;
 
 /**
  * Class TooManyBooksAssignedToUserException
- * @package Kennynguyeenx\PortsAndAdapters\Domain\Borrowing\Core\Model\Exception
+ * @package Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\Exception
  */
 class TooManyBooksAssignedToUserException extends Exception
 {
