@@ -1,0 +1,12 @@
+.idea
+docker/nginx
+vendor
+phpunit_coverage
+
+**.gitignore
+
+.env
+.env.example
+.dockerignore
+docker-compose.yml
+README.md

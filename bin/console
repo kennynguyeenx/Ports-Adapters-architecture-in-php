@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+use Symfony\Component\Console\Command\Command;
+
+require dirname(__DIR__) . '/init.php';
+
+$app = new Application('');
+
+/** @var Command[] $routes */
+$commands = require __DIR__ . '/../configs/console-commands.php';
+
+$app->addCommands($commands);
+
+$app->run();
