@@ -1,0 +1,22 @@
+Kennynguyeenx\LibraryHexagonal\Domain\Borrowing\Core\Model\ReservedBook:
+  type: entity
+  repositoryClass: Kennynguyeenx\LibraryHexagonal\Infrastructure\Domain\Borrowing\Core\Model\ReservedBook\DoctrineReservedBookRepository
+  table: reserved
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    bookId:
+      type: integer
+      column: book_id
+    userId:
+      type: integer
+      column: user_id
+    reservedDate:
+      type: datetime
+      column: reserved_date
+  uniqueConstraints:
+    book_id_UNIQUE:
+      columns: book_id

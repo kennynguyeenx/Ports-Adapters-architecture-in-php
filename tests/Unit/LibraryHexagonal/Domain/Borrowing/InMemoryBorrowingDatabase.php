@@ -23,19 +23,19 @@ class InMemoryBorrowingDatabase implements BorrowingDatabase
     /**
      * @var ActiveUser[]
      */
-    public $activeUsers = [];
+    public array $activeUsers = [];
     /**
      * @var AvailableBook[]
      */
-    public $availableBooks = [];
+    public array $availableBooks = [];
     /**
      * @var ReservedBook[]
      */
-    public $reservedBooks = [];
+    public array $reservedBooks = [];
     /**
      * @var BorrowedBook[]
      */
-    public $borrowedBooks = [];
+    public array $borrowedBooks = [];
 
     /**
      * @param AvailableBook $availableBook
@@ -93,11 +93,11 @@ class InMemoryBorrowingDatabase implements BorrowingDatabase
      */
     public function findReservationsForMoreThan(int $days): array
     {
-        $threeDaysAgo = date('Y-m-d', strtotime('-3 days'));
+        $nDaysAgo = date('Y-m-d', strtotime('-' . $days . ' days'));
         $overdueReservationList = [];
 
         foreach ($this->reservedBooks as $reservedBook) {
-            if ($reservedBook->getReservedDate()->format('Y-m-d') < $threeDaysAgo) {
+            if ($reservedBook->getReservedDate()->format('Y-m-d') < $nDaysAgo) {
                 array_push(
                     $overdueReservationList,
                     new OverdueReservation(1, $reservedBook->getId())

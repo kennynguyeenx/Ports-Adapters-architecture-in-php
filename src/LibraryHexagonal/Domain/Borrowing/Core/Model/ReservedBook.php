@@ -15,15 +15,19 @@ class ReservedBook implements Book
     /**
      * @var int
      */
-    private $bookId;
+    public int $id;
     /**
      * @var int
      */
-    private $userId;
+    private int $bookId;
+    /**
+     * @var int
+     */
+    private int $userId;
     /**
      * @var DateTime
      */
-    private $reservedDate;
+    private DateTime $reservedDate;
 
     /**
      * ReservedBook constructor.

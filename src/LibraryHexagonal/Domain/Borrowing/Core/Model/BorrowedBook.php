@@ -15,15 +15,19 @@ class BorrowedBook implements Book
     /**
      * @var int
      */
-    private $bookId;
+    public int $id;
     /**
      * @var int
      */
-    private $userId;
+    private int $bookId;
+    /**
+     * @var int
+     */
+    private int $userId;
     /**
      * @var DateTime
      */
-    private $borrowedDate;
+    private DateTime $borrowedDate;
 
     /**
      * BorrowedBook constructor.

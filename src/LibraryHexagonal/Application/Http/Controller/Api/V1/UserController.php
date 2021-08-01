@@ -23,7 +23,7 @@ class UserController extends LibraryHexagonalController
     /**
      * @var UserCommandController
      */
-    private $userCommandController;
+    private UserCommandController $userCommandController;
 
     /**
      * UserCommandController constructor.

@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 
+use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
 
 require dirname(__DIR__) . '/init.php';
@@ -12,4 +13,7 @@ $commands = require __DIR__ . '/../configs/console-commands.php';
 
 $app->addCommands($commands);
 
-$app->run();
+try {
+    $app->run();
+} catch (Exception $e) {
+}

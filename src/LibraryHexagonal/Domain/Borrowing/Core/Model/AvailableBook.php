@@ -13,15 +13,19 @@ class AvailableBook implements Book
     /**
      * @var int
      */
-    private $id;
+    public int $id;
+    /**
+     * @var int
+     */
+    private int $bookId;
 
     /**
      * AvailableBook constructor.
-     * @param int $id
+     * @param int $bookId
      */
-    public function __construct(int $id)
+    public function __construct(int $bookId)
     {
-        $this->id = $id;
+        $this->bookId = $bookId;
     }
 
     /**
@@ -29,6 +33,6 @@ class AvailableBook implements Book
      */
     public function getId(): int
     {
-        return $this->id;
+        return $this->bookId;
     }
 }
